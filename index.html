@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Old Man Sandwich Shop · Garage Sandwich, São Caetano do Sul</title>
+<meta name="description" content="Hamburgueria artesanal em São Caetano do Sul desde 2017. Quatro anos seguidos no pódio do Guia do Hambúrguer. Burger do mês, salão sem reserva e delivery no iFood. Rua Tapajós, 846.">
+<meta name="theme-color" content="#0C0A08">
+<link rel="icon" type="image/png" href="assets/img/logo-tile.png">
+<link rel="apple-touch-icon" href="assets/img/logo-tile.png">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Old Man Sandwich Shop">
+<meta property="og:title" content="Old Man Sandwich Shop · Da garagem da vó ao pódio de São Paulo">
+<meta property="og:description" content="Hamburgueria artesanal em São Caetano do Sul desde 2017. Sem reserva, por ordem de chegada. Delivery no iFood.">
+<meta property="og:image" content="assets/img/hero-skate.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Yellowtail&display=swap">
+<link rel="preload" as="image" href="assets/img/hero-skate.jpg" fetchpriority="high">
+
+<style>
+/* ============================================================
+   OLD MAN SANDWICH SHOP
+   Paleta tirada das fotos da marca: placa esmaltada preta,
+   tijolo aparente, luz de lâmpada quente e o dourado de
+   letrista da vitrine (#FBCA02).
+   ============================================================ */
+:root{
+  color-scheme: dark;
+  --ink:#0C0A08;
+  --coal:#13100C;
+  --clay:#1C1711;
+  --clay-hi:#271F17;
+  --bone:#EFE8D2;
+  --bone-soft:#C7BCA6;
+  --muted:#8A7F6C;
+  --gold:#FBCA02;
+  --gold-hi:#FFD836;
+  --ember:#CD7E2F;
+  --brick:#92451D;
+  --line:rgba(239,232,210,.14);
+  --line-soft:rgba(239,232,210,.07);
+  --ongold:#17120A;
+  --sans:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --disp:'Oswald','Archivo',Arial,sans-serif;
+  --script:'Yellowtail',cursive;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --gutter:clamp(20px,5vw,72px);
+  --header-h:70px;
+  --maxw:1280px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 18px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--bone);
+  font:400 17px/1.65 var(--sans);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
+}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+::selection{background:var(--gold);color:var(--ongold)}
+
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter);width:100%}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:var(--ongold);padding:12px 18px;z-index:500;font-weight:700}
+.skip:focus{left:12px;top:12px}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- tipografia ---------- */
+.display,.h1,.h2,.h3{
+  margin:0;font-family:var(--disp);font-weight:700;text-transform:uppercase;
+  letter-spacing:.005em;line-height:1.14;text-wrap:balance
+}
+.display{font-size:clamp(42px,6.8vw,96px);line-height:1.1}
+.h1{font-size:clamp(36px,5.8vw,76px)}
+.h2{font-size:clamp(30px,4.4vw,56px)}
+.h3{font-size:clamp(20px,2vw,26px);line-height:1.14;font-weight:600}
+.eyebrow{
+  display:flex;align-items:center;gap:13px;margin:0 0 20px;
+  font:500 11.5px/1 var(--disp);letter-spacing:.26em;text-transform:uppercase;color:var(--gold)
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;flex:none}
+.script{font:400 1.05em/1 var(--script);text-transform:none;letter-spacing:0;color:var(--gold)}
+.lede{font-size:clamp(17px,1.5vw,20px);line-height:1.58;color:var(--bone-soft);max-width:46ch;margin:22px 0 0}
+.body{color:var(--bone-soft);max-width:58ch;margin:16px 0 0;font-size:16.5px}
+.tiny{font:500 12px/1.55 var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- botões ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 26px;border:1.5px solid transparent;border-radius:3px;cursor:pointer;
+  font:600 13px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;text-align:center;
+  transition:background .25s var(--ease),color .25s,border-color .25s,transform .2s var(--ease)
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:var(--ongold);border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-hi);border-color:var(--gold-hi)}
+.btn-line{border-color:var(--line);color:var(--bone)}
+.btn-line:hover{border-color:var(--bone);background:var(--bone);color:var(--ink)}
+.btn-ongold{border-color:rgba(23,18,10,.3);color:var(--ongold)}
+.btn-ongold:hover{background:var(--ongold);color:var(--gold);border-color:var(--ongold)}
+.btn-sm{padding:11px 17px;font-size:11.5px;gap:8px}
+.btn-lg{padding:19px 32px;font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:32px}
+
+/* ---------- marca ---------- */
+/* O logo real da casa, tirado da arte oficial e recortado com fundo
+   transparente. Branco por padrão; no dourado vira a cor do fundo. */
+.logo{display:inline-flex;align-items:center;flex:none}
+.brand{width:auto;display:block}
+.site-header .brand{height:40px}
+.site-footer .brand{height:62px}
+.drawer .brand{height:48px;filter:brightness(0) saturate(100%)}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:200;height:var(--header-h);
+  background:rgba(12,10,8,.86);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);
+  border-bottom:1px solid var(--line-soft)
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--header-h)}
+.nav{display:none;align-items:center;gap:clamp(16px,2.2vw,30px)}
+.nav a{
+  position:relative;font:500 12px/1 var(--disp);letter-spacing:.17em;text-transform:uppercase;
+  color:var(--bone-soft);padding:9px 0;transition:color .22s
+}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .32s var(--ease)}
+.nav a:hover{color:var(--gold)}
+.nav a:hover::after{transform:scaleX(1)}
+.header-cta{display:none}
+.burger-btn{
+  display:inline-flex;align-items:center;gap:10px;background:none;border:1.5px solid var(--line);
+  border-radius:3px;padding:10px 15px;cursor:pointer;color:var(--bone);
+  font:500 11px/1 var(--disp);letter-spacing:.18em;text-transform:uppercase
+}
+.burger-lines{position:relative;width:17px;height:11px;flex:none}
+.burger-lines i{position:absolute;left:0;right:0;height:2px;background:currentColor;transition:transform .32s var(--ease),top .32s var(--ease),opacity .18s}
+.burger-lines i:nth-child(1){top:0}
+.burger-lines i:nth-child(2){top:4.5px}
+.burger-lines i:nth-child(3){top:9px}
+[aria-expanded="true"] .burger-lines i:nth-child(1){top:4.5px;transform:rotate(45deg)}
+[aria-expanded="true"] .burger-lines i:nth-child(2){opacity:0}
+[aria-expanded="true"] .burger-lines i:nth-child(3){top:4.5px;transform:rotate(-45deg)}
+@media (min-width:1040px){
+  .nav{display:flex}
+  .header-cta{display:inline-flex}
+  .burger-btn{display:none}
+}
+
+/* ---------- drawer ---------- */
+.drawer{
+  position:fixed;inset:var(--header-h) 0 0;z-index:190;background:var(--gold);color:var(--ongold);
+  visibility:hidden;opacity:0;transition:opacity .3s var(--ease),visibility 0s linear .3s;overflow-y:auto
+}
+.drawer.open{visibility:visible;opacity:1;transition:opacity .3s var(--ease)}
+.drawer-in{display:flex;flex-direction:column;min-height:100%;padding-block:24px 36px}
+.drawer ul{list-style:none;margin:0;padding:0;border-top:1px solid rgba(23,18,10,.22)}
+.drawer li{border-bottom:1px solid rgba(23,18,10,.22)}
+.drawer li a{
+  display:flex;align-items:center;justify-content:space-between;padding:17px 2px;
+  font:700 clamp(26px,7vw,36px)/1.12 var(--disp);text-transform:uppercase;letter-spacing:.01em
+}
+.drawer li a span{font:500 11px/1 var(--disp);letter-spacing:.2em;color:rgba(23,18,10,.6)}
+.drawer-foot{margin-top:auto;padding-top:30px;display:grid;gap:10px}
+
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-right:8px}
+.dot.off{opacity:.4}
+.live{
+  display:inline-flex;align-items:center;align-self:flex-start;
+  padding:8px 14px;border:1px solid var(--line);border-radius:100px;
+  font:500 11.5px/1 var(--disp);letter-spacing:.15em;text-transform:uppercase;color:var(--bone-soft)
+}
+.live.on{color:var(--gold);border-color:rgba(251,202,2,.42)}
+
+/* ---------- faixa rolante ---------- */
+.marquee{background:var(--gold);color:var(--ongold);overflow:hidden;padding-block:13px}
+.marquee-track{display:flex;width:max-content;animation:slide 44s linear infinite}
+.marquee-track span{
+  display:inline-flex;align-items:center;gap:26px;padding-right:26px;white-space:nowrap;
+  font:600 12px/1 var(--disp);letter-spacing:.22em;text-transform:uppercase
+}
+.marquee-track span i{font-style:normal;opacity:.5}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* ---------- seções ---------- */
+.sec{padding-block:clamp(60px,8vw,118px)}
+.sec.coal{background:var(--coal)}
+.sec.clay{background:var(--clay)}
+.sec-head{max-width:62ch;margin-bottom:clamp(34px,4.4vw,58px)}
+.grid{display:grid;gap:clamp(16px,2vw,24px)}
+@media(min-width:760px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--clay);border:1px solid var(--line-soft);border-radius:4px;
+  padding:clamp(24px,2.6vw,34px);display:flex;flex-direction:column;gap:12px
+}
+.sec.clay .card{background:var(--clay-hi)}
+.card .num{font:500 11.5px/1 var(--disp);letter-spacing:.24em;color:var(--gold)}
+.card p{margin:0;color:var(--bone-soft);font-size:16px}
+.card .foot{margin-top:auto;padding-top:14px}
+
+/* ---------- regras / listas ---------- */
+.rule-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rule-list li{
+  display:grid;gap:4px 28px;padding:22px 0;border-bottom:1px solid var(--line);
+  grid-template-columns:1fr
+}
+.rule-list h3{margin:0;font:600 clamp(19px,2.2vw,25px)/1.18 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+.rule-list p{margin:0;color:var(--bone-soft);font-size:16px;max-width:60ch}
+.rule-list .tag{font:500 11px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);align-self:center}
+@media(min-width:860px){
+  .rule-list li{grid-template-columns:minmax(0,15rem) 1fr auto;align-items:baseline}
+  .rule-list .tag{justify-self:end}
+}
+
+/* ---------- bloco em destaque ---------- */
+.feature{display:grid;grid-template-columns:1fr;background:var(--clay)}
+/* As fotos da marca vêm do Instagram em 360x640. Em vez de esticar, a imagem
+   fica emoldurada no tamanho que aguenta, o que também combina com a placa. */
+.feature-img{
+  background:var(--coal);display:grid;place-items:center;
+  padding:clamp(34px,5vw,64px) var(--gutter);
+  border-bottom:1px solid var(--line-soft)
+}
+.feature-img img{
+  width:100%;max-width:400px;height:auto;border-radius:3px;
+  border:1px solid var(--line-soft);box-shadow:0 26px 60px -28px rgba(0,0,0,.9)
+}
+/* O reels é um iframe do Instagram: carrega preguiçoso e, se a pessoa
+   bloquear conteúdo de terceiros, sobra a moldura com o link. */
+.reel{
+  width:100%;max-width:400px;aspect-ratio:9/16;border-radius:3px;overflow:hidden;
+  border:1px solid var(--line-soft);background:#0a0a0a;
+  box-shadow:0 26px 60px -28px rgba(0,0,0,.9)
+}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel-nota a:hover{color:var(--gold)}
+.reel-nota{margin:14px 0 0;text-align:center}
+@media(min-width:900px){.feature-img .reel{max-width:420px}}
+.feature-copy{padding:clamp(40px,5.4vw,78px) var(--gutter)}
+@media(min-width:900px){
+  .feature{grid-template-columns:.86fr 1.14fr;align-items:stretch}
+  .feature-img{border-bottom:0;border-right:1px solid var(--line-soft);padding-block:clamp(56px,7vw,96px)}
+  .feature-img img{max-width:440px}
+  .feature-copy{display:flex;flex-direction:column;justify-content:center;padding-right:max(var(--gutter),calc((100vw - var(--maxw))/2 + var(--gutter)))}
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding:0;list-style:none}
+.chips li{
+  border:1px solid var(--line);border-radius:100px;padding:8px 15px;
+  font:500 11.5px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--bone-soft)
+}
+.chips li.now{background:var(--gold);border-color:var(--gold);color:var(--ongold)}
+
+/* ---------- citação ---------- */
+.quote{border-left:2px solid var(--gold);padding-left:clamp(20px,3vw,34px);margin:0}
+.quote p{margin:0;font:400 clamp(21px,2.6vw,32px)/1.38 var(--sans);color:var(--bone)}
+.quote footer{margin-top:18px;font:500 11.5px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- números ---------- */
+.stats{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:4px;overflow:hidden}
+@media(min-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--coal);padding:clamp(22px,2.6vw,30px)}
+.stat b{display:block;font:700 clamp(32px,3.8vw,46px)/1.08 var(--disp);color:var(--gold)}
+.stat span{display:block;margin-top:9px;font-size:14.5px;line-height:1.45;color:var(--bone-soft)}
+
+/* ---------- instagram ---------- */
+.ig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(8px,1.1vw,14px)}
+@media(min-width:680px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+.ig-tile{position:relative;aspect-ratio:1;overflow:hidden;border-radius:3px;background:var(--clay);display:block}
+.ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease),opacity .3s}
+.ig-tile:hover img{transform:scale(1.05);opacity:.82}
+.ig-tile .cap{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
+  background:linear-gradient(to top,rgba(12,10,8,.9),transparent);
+  font:500 11px/1.35 var(--disp);letter-spacing:.1em;text-transform:uppercase;color:var(--bone)
+}
+
+/* ---------- onde fica ---------- */
+.place{display:grid;gap:clamp(20px,2.6vw,34px)}
+@media(min-width:900px){.place{grid-template-columns:1.1fr .9fr;align-items:start}}
+.place-img{
+  border-radius:4px;overflow:hidden;background:var(--coal);
+  border:1px solid var(--line-soft);max-width:460px;width:100%;
+  box-shadow:0 26px 60px -30px rgba(0,0,0,.85)
+}
+.place-img img{width:100%;height:auto;display:block}
+@media(min-width:900px){
+  .place > .place-img:last-child{justify-self:end}
+  .place > .place-img:first-child{justify-self:start}
+}
+.info-list{list-style:none;margin:0;padding:0}
+.info-list li{padding:17px 0;border-bottom:1px solid var(--line-soft);display:grid;gap:3px}
+.info-list li:first-child{padding-top:0}
+.info-list dt,.info-list .k{font:500 11px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.info-list .v{font-size:17px;color:var(--bone)}
+.info-list a.v:hover{color:var(--gold)}
+
+/* ---------- faq ---------- */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:22px 42px 22px 0;position:relative;
+  font:600 clamp(17px,1.9vw,21px)/1.3 var(--disp);text-transform:uppercase;letter-spacing:.01em
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:50%;width:12px;height:2px;background:var(--gold);
+  transition:transform .3s var(--ease)
+}
+.faq summary::before{
+  content:"";position:absolute;right:11px;top:50%;width:2px;height:12px;background:var(--gold);
+  transform:translateY(-50%);transition:transform .3s var(--ease),opacity .3s
+}
+.faq summary::after{transform:translateY(-50%)}
+.faq details[open] summary::before{transform:translateY(-50%) scaleY(0);opacity:0}
+.faq summary:hover{color:var(--gold)}
+.faq .ans{padding:0 0 24px;color:var(--bone-soft);max-width:70ch;margin:0}
+
+/* ---------- rodapé ---------- */
+.site-footer{background:var(--coal);border-top:1px solid var(--line-soft);padding-block:clamp(48px,6vw,78px) 28px}
+.foot-grid{display:grid;gap:34px}
+@media(min-width:860px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr;gap:48px}}
+.foot-grid h4{margin:0 0 15px;font:500 11px/1 var(--disp);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.foot-grid a:hover{color:var(--gold)}
+.foot-bar{
+  margin-top:clamp(38px,5vw,60px);padding-top:22px;border-top:1px solid var(--line-soft);
+  display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;
+  font:500 11px/1.6 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)
+}
+
+/* ---------- dock mobile ---------- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:180;
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  transform:translateY(102%);transition:transform .34s var(--ease)
+}
+.dock.show{transform:none}
+.dock a{
+  display:flex;align-items:center;justify-content:center;gap:9px;padding:15px 10px;
+  background:var(--ink);font:600 12px/1 var(--disp);letter-spacing:.14em;text-transform:uppercase
+}
+.dock a.main{background:var(--gold);color:var(--ongold)}
+.dock svg{width:16px;height:16px;flex:none}
+@media(min-width:1040px){.dock{display:none}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+}
+
+/* ============================================================
+   CAMADA SUJA
+   A marca é garagem, placa esmaltada e tijolo. Limpo demais
+   mente sobre o lugar. Daqui pra baixo é textura, adesivo e
+   fotocópia.
+   ============================================================ */
+.grain{
+  position:fixed;inset:0;z-index:300;pointer-events:none;opacity:.085;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
+}
+@media (prefers-reduced-motion:reduce){.grain{opacity:.05}}
+
+/* ---------- adesivos ---------- */
+.stickers{display:flex;flex-wrap:wrap;gap:10px 12px;margin:28px 0 0;padding:0;list-style:none}
+.sticker{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 15px;
+  font:600 11px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;
+  border:2px solid currentColor;border-radius:2px;color:var(--bone);
+  background:rgba(12,10,8,.55);transform:rotate(-2deg);transition:transform .3s var(--ease)
+}
+.sticker.gold{color:var(--gold)}
+.stickers li:nth-child(2n) .sticker,.stickers li:nth-child(2n).sticker{transform:rotate(1.7deg)}
+.stickers li:nth-child(3n) .sticker,.stickers li:nth-child(3n).sticker{transform:rotate(-.8deg)}
+.sticker:hover{transform:rotate(0)}
+
+/* ---------- carimbo ---------- */
+.stamp{
+  display:inline-grid;place-items:center;gap:2px;padding:14px 18px;flex:none;
+  border:3px double var(--gold);color:var(--gold);border-radius:3px;
+  transform:rotate(-7deg);text-align:center
+}
+.stamp b{font:700 26px/1 var(--disp)}
+.stamp span{font:600 9px/1.2 var(--disp);letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+
+/* ---------- fita crepe ---------- */
+.tape{
+  position:absolute;top:-13px;left:clamp(18px,4vw,42px);z-index:2;
+  padding:6px 20px;background:rgba(239,232,210,.17);
+  border-left:1px dashed rgba(239,232,210,.3);border-right:1px dashed rgba(239,232,210,.3);
+  font:600 10px/1 var(--disp);letter-spacing:.24em;text-transform:uppercase;color:var(--bone-soft);
+  transform:rotate(-1.6deg)
+}
+
+/* ---------- borda rasgada ---------- */
+.tear{display:block;width:100%;height:clamp(14px,1.6vw,22px);fill:currentColor}
+.tear-ink{color:var(--ink)}
+.tear-coal{color:var(--coal)}
+.tear-clay{color:var(--clay)}
+
+/* ---------- traço marcado sob o título ---------- */
+/* O traço precisa do próprio contexto de empilhamento: sem isso o z-index
+   negativo escapa e o traço ou some atrás do fundo da seção ou passa por
+   cima das letras. */
+.mark{position:relative;display:inline-block;isolation:isolate}
+.mark::after{
+  content:"";position:absolute;left:-1.5%;right:-1.5%;bottom:-.08em;height:.16em;z-index:-1;
+  background:var(--gold);opacity:.92;
+  clip-path:polygon(0 22%,3% 4%,19% 14%,38% 2%,57% 16%,74% 5%,91% 15%,100% 6%,100% 86%,88% 98%,69% 88%,47% 100%,28% 87%,11% 97%,0 88%)
+}
+
+/* ---------- hero em vídeo ---------- */
+.hero{
+  position:relative;display:grid;align-items:end;overflow:hidden;
+  min-height:min(100svh,920px);background:var(--ink)
+}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg video,.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero-veil{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(to top,rgba(12,10,8,.97) 4%,rgba(12,10,8,.52) 46%,rgba(12,10,8,.74) 100%),
+    radial-gradient(130% 90% at 50% 110%,transparent 30%,rgba(12,10,8,.55))
+}
+.hero-in{position:relative;z-index:2;padding-block:clamp(96px,16vh,170px) clamp(56px,9vh,104px)}
+.hero-logo{
+  width:clamp(188px,25vw,318px);height:auto;margin:0 0 clamp(20px,3vw,32px);
+  filter:drop-shadow(0 12px 34px rgba(0,0,0,.75))
+}
+.hero .display span{display:block}
+.hero .display .gold{color:var(--gold)}
+.hero-sub{max-width:46ch;margin:22px 0 0;font-size:clamp(16px,1.5vw,19px);line-height:1.58;color:var(--bone-soft)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin:26px 0 0;font:500 11.5px/1.5 var(--disp);letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.hero-meta b{color:var(--bone);font-weight:500}
+.scroll-cue{
+  position:absolute;right:var(--gutter);bottom:clamp(22px,4vh,40px);z-index:2;
+  display:none;align-items:center;gap:10px;
+  font:600 10.5px/1 var(--disp);letter-spacing:.24em;text-transform:uppercase;color:var(--bone-soft)
+}
+.scroll-cue svg{width:14px;height:22px;animation:bob 2.1s var(--ease) infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue svg{animation:none}}
+@media(min-width:900px){.scroll-cue{display:inline-flex}}
+.hero-marca{display:flex;flex-wrap:wrap;align-items:flex-end;gap:clamp(18px,3vw,38px)}
+
+/* ---------- fotos em fotocópia ---------- */
+.ig-tile img{filter:grayscale(1) contrast(1.45) brightness(.92)}
+.ig-tile:hover img{filter:none}
+.xerox{filter:grayscale(1) contrast(1.5)}
+
+/* ---------- a casa: texto + a arte das regras ---------- */
+.casa-top{display:grid;gap:clamp(26px,4vw,56px);align-items:center;margin-bottom:clamp(34px,4.4vw,56px)}
+@media(min-width:900px){.casa-top{grid-template-columns:1.02fr .98fr}}
+.casa-top .sec-head{margin-bottom:0}
+.arte-regras{
+  position:relative;max-width:420px;width:100%;justify-self:center;
+  border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  transform:rotate(1.5deg);box-shadow:0 32px 70px -34px rgba(0,0,0,.95);
+  transition:transform .45s var(--ease)
+}
+.arte-regras:hover{transform:rotate(0)}
+.arte-regras img{width:100%;height:auto;display:block}
+
+/* ---------- foto do Natal na seção da vó ---------- */
+.vo-frase{margin:28px 0 0;font:400 italic clamp(17px,1.8vw,21px)/1.5 var(--sans);color:var(--bone);max-width:48ch;
+  border-left:2px solid var(--gold);padding-left:clamp(16px,2vw,24px)}
+
+/* ---------- faixa de lanches ---------- */
+.tira{display:grid;gap:clamp(10px,1.2vw,16px);grid-template-columns:repeat(2,1fr)}
+@media(min-width:760px){.tira{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.tira{grid-template-columns:repeat(6,1fr)}}
+.tira figure{margin:0;position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:3px;background:var(--clay)}
+.tira img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.tira figure:hover img{transform:scale(1.06)}
+.tira figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:24px 12px 11px;
+  background:linear-gradient(to top,rgba(12,10,8,.92),transparent);
+  font:600 10.5px/1.3 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--bone)
+}
+@media(min-width:1100px){
+  .tira figure:nth-child(odd){transform:translateY(-10px)}
+  .tira figure:nth-child(3n){aspect-ratio:3/4.3}
+}
+
+/* ---------- conquistas ---------- */
+.foto-larga{
+  margin:clamp(30px,4vw,48px) 0 0;border-radius:3px;overflow:hidden;
+  border:1px solid var(--line-soft);background:var(--coal);
+  box-shadow:0 30px 70px -36px rgba(0,0,0,.9)
+}
+.foto-larga img{width:100%;height:auto;display:block}
+.linha{list-style:none;margin:clamp(30px,4vw,48px) 0 0;padding:0;border-top:1px solid var(--line)}
+.linha li{
+  display:grid;gap:4px 28px;padding:20px 0;border-bottom:1px solid var(--line);
+  grid-template-columns:1fr;align-items:baseline
+}
+@media(min-width:800px){.linha li{grid-template-columns:7.5rem 1fr}}
+.linha .ano{font:700 clamp(17px,1.9vw,21px)/1 var(--disp);letter-spacing:.04em;color:var(--gold)}
+.linha p{margin:0;color:var(--bone-soft);max-width:62ch}
+.linha b{color:var(--bone);font-weight:600}
+.premio-par{display:grid;gap:clamp(14px,1.8vw,22px);grid-template-columns:repeat(2,1fr);margin-top:clamp(28px,3.4vw,44px)}
+.premio-par figure{margin:0;border-radius:3px;overflow:hidden;border:1px solid var(--line-soft);background:var(--clay)}
+.premio-par img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+
+/* ---------- a vó ---------- */
+.vo{display:grid;gap:clamp(24px,3.4vw,46px);align-items:center}
+@media(min-width:900px){.vo{grid-template-columns:.85fr 1.15fr}}
+.vo-frame{
+  position:relative;background:var(--clay-hi);border:1px solid var(--line);
+  padding:clamp(16px,2vw,24px);border-radius:3px;transform:rotate(-1.4deg);
+  box-shadow:0 30px 70px -34px rgba(0,0,0,.9);max-width:460px;width:100%;justify-self:center
+}
+.vo-frame img{width:100%;height:auto;border-radius:2px;display:block}
+.vo-frame .legenda{
+  margin:14px 2px 2px;font:400 clamp(17px,2vw,22px)/1.2 var(--script);color:var(--gold);text-align:center
+}
+
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<a class="skip" href="#top">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="#top" aria-label="Old Man Sandwich Shop, início">
+      <img class="brand" src="assets/img/logo-oldman.png" width="389" height="158" alt="Old Man Sandwich Shop">
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#casa">A casa</a>
+      <a href="#mes">Burger do mês</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="#historia">História</a>
+      <a href="#onde">Onde fica</a>
+    </nav>
+
+    <a class="btn btn-gold btn-sm header-cta" href="https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592" target="_blank" rel="noopener">Pedir no iFood</a>
+
+    <button class="burger-btn" id="navBtn" aria-expanded="false" aria-controls="drawer">
+      <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span> Menu
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="wrap drawer-in">
+    <ul>
+      <li><a href="#casa">A casa <span>01</span></a></li>
+      <li><a href="#mes">Burger do mês <span>02</span></a></li>
+      <li><a href="cardapio.html">Cardápio <span>03</span></a></li>
+      <li><a href="#historia">História <span>04</span></a></li>
+      <li><a href="#vo">A vó <span>05</span></a></li>
+      <li><a href="#premios">Conquistas <span>06</span></a></li>
+      <li><a href="#onde">Onde fica <span>07</span></a></li>
+    </ul>
+    <div class="drawer-foot">
+      <a class="btn btn-ongold" href="https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592" target="_blank" rel="noopener">Pedir no iFood</a>
+      <a class="btn btn-ongold" href="https://wa.me/5511917545253" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<!-- O vídeo de fundo é opcional: enquanto assets/video/hero.mp4 não existir,
+     o poster segura a cena e nada quebra. Veja assets/video/LEIA-ME.txt. -->
+<section class="hero">
+  <div class="hero-bg">
+    <video id="heroVid" autoplay muted loop playsinline preload="metadata"
+           poster="assets/img/hero-skate.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/video/hero.webm" type="video/webm">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+
+  <div class="wrap hero-in">
+    <img class="hero-logo" src="assets/img/logo-oldman.png" width="389" height="158"
+         alt="Old Man Sandwich Shop, est. 2017">
+
+    <h1 class="display">
+      <span>Dirty hands</span>
+      <span>is a sign of</span>
+      <span class="gold">clean money</span>
+    </h1>
+
+    <p class="hero-sub">
+      Carne na chapa, e pão tostado desde 2017.
+    </p>
+
+    <ul class="stickers">
+      <li class="sticker gold" id="heroLive"><span class="dot" id="heroDot"></span><span id="heroTxt">Verificando o horário</span></li>
+      <li class="sticker">Sem reserva</li>
+      <li class="sticker">Até 6 pessoas</li>
+      <li class="sticker">Est. 2017</li>
+    </ul>
+
+    <div class="actions">
+      <a class="btn btn-gold btn-lg" href="https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.6 11.2a2 2 0 0 1-2 1.8H6.6a2 2 0 0 1-2-1.8L3 7Z"/><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/></svg>
+        Pedir no iFood
+      </a>
+      <a class="btn btn-line btn-lg" href="#onde">Como chegar</a>
+    </div>
+
+    <p class="hero-meta">
+      <span>Rua Tapajós, <b>846</b></span>
+      <span>Todos os dias, <b>18h às 23h30</b></span>
+    </p>
+  </div>
+
+  <a class="scroll-cue" href="#casa">
+    Rola
+    <svg viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="1" y="1" width="12" height="20" rx="6"/><path d="M7 6v4"/></svg>
+  </a>
+</section>
+
+<!-- ============ FAIXA ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>4 anos no pódio do Guia do Hambúrguer <i>✶</i> Dirty hands is a sign of clean money <i>✶</i> 2× melhor hamburgueria de São Paulo <i>✶</i> Garage Sandwich · Est. 2017 <i>✶</i> São Caetano do Sul · ABC <i>✶</i>&nbsp;</span>
+    <span>4 anos no pódio do Guia do Hambúrguer <i>✶</i> Dirty hands is a sign of clean money <i>✶</i> 2× melhor hamburgueria de São Paulo <i>✶</i> Garage Sandwich · Est. 2017 <i>✶</i> São Caetano do Sul · ABC <i>✶</i>&nbsp;</span>
+  </div>
+</div>
+
+<!-- ============ A CASA ============ -->
+<section class="sec" id="casa" aria-labelledby="casa-h">
+  <div class="wrap">
+    <div class="casa-top">
+      <div class="sec-head rv">
+        <p class="eyebrow">Antes de vir</p>
+        <h2 class="h2" id="casa-h">Três jeitos de comer.<br>Por ordem de chegada.</h2>
+        <p class="lede">
+          A casa é menor que a fila. Dá uma olhada aqui antes de sair, pra noite não
+          virar vacilo.
+        </p>
+        <ul class="stickers">
+          <li class="sticker gold">Grupo de até 6</li>
+          <li class="sticker">Abre às 18h</li>
+        </ul>
+      </div>
+
+      <figure class="arte-regras rv">
+        <img src="assets/img/regras-da-casa.jpg" width="1400" height="2488" loading="lazy"
+             alt="Arte das regras da casa: dois personagens desenhados à mão sentados à mesa, com os dizeres sobre grupos de até 6 pessoas e ausência de reservas.">
+      </figure>
+    </div>
+
+    <div class="grid g3">
+      <article class="card rv">
+        <p class="num">01 · Salão</p>
+        <h3 class="h3">Por ordem<br>de chegada</h3>
+        <p>
+          Reserva não rola e a casa recebe grupo de até 6 pessoas. Sexta e sábado
+          a fila se forma antes de abrir: quem chega às 18h janta às 18h.
+        </p>
+        <div class="foot"><a class="btn btn-line btn-sm" href="#onde">Ver endereço e horário</a></div>
+      </article>
+
+      <article class="card rv">
+        <p class="num">02 · Delivery</p>
+        <h3 class="h3">Chega quente,<br>pelo iFood</h3>
+        <p>
+          Entrega é só pelo iFood. É lá que o cardápio e o preço ficam certos, burger
+          do mês incluso. Se você procurou em outro app e não achou, é por isso.
+        </p>
+        <div class="foot"><a class="btn btn-gold btn-sm" href="https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592" target="_blank" rel="noopener">Abrir o iFood</a></div>
+      </article>
+
+      <article class="card rv">
+        <p class="num">03 · WhatsApp</p>
+        <h3 class="h3">Dúvida antes<br>de sair de casa</h3>
+        <p>
+          Quer saber como tá a espera hoje ou se o burger do mês ainda tá rolando?
+          Manda mensagem que a gente responde.
+        </p>
+        <div class="foot"><a class="btn btn-line btn-sm" href="https://wa.me/5511917545253" target="_blank" rel="noopener">Chamar no WhatsApp</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="tear-wrap" style="background:var(--ink)" aria-hidden="true"><svg class="tear" style="color:var(--clay)" viewBox="0 0 1440 24" preserveAspectRatio="none"><path d="M0 24 L0 9.7 L54 11.9 L109 6.9 L172 3.8 L230 7.2 L295 11.0 L327 6.9 L362 2.6 L432 9.1 L496 13.3 L550 9.3 L615 9.3 L680 1.7 L739 2.3 L767 3.8 L808 8.7 L863 5.4 L926 11.6 L985 4.3 L1029 7.5 L1097 2.5 L1164 4.8 L1225 13.4 L1256 10.0 L1302 10.6 L1360 5.0 L1390 8.3 L1422 6.3 L1440 6.1 L1440 24 Z"/></svg></div>
+
+<!-- ============ BURGER DO MÊS ============ -->
+<section class="feature" id="mes" aria-labelledby="mes-h">
+  <div class="feature-img">
+    <div>
+      <div class="reel">
+        <video autoplay muted loop playsinline preload="metadata"
+               poster="assets/img/burger-legacy.jpg"
+               aria-label="Vídeo do Legacy, o especial de setembro, sendo montado.">
+          <source src="assets/video/legacy.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="tiny reel-nota">
+        <a href="https://www.instagram.com/oldmansandwich/" target="_blank" rel="noopener">Acompanhe a Old Man no Instagram</a>
+      </p>
+    </div>
+  </div>
+  <div class="feature-copy">
+    <p class="eyebrow rv">Edição limitada</p>
+    <h2 class="h1 rv" id="mes-h">Todo mês sai um<br>burger que não volta</h2>
+    <p class="body rv">
+      Uma vez por mês a cozinha solta uma receita nova, no salão e no delivery ao mesmo
+      tempo. Fica algumas semanas e sai de cartaz. De vez em quando a galera pede tanto
+      que ele ganha sobrevida. Foi o que rolou com o Califa, que nasceu pro IPA Day e
+      acabou ficando o mês inteiro.
+    </p>
+    <p class="body rv" style="color:var(--bone)">
+      <b>Legacy</b>, o especial de setembro: burger 160 g, queijo prato, ragu de bacon,
+      parmesão ralado, rúcula e maionese de pera caramelizada, no pão brioche.
+    </p>
+
+    <ul class="chips rv">
+      <li class="now">Set · Legacy</li>
+      <li>Ago · Califa</li>
+      <li>Jul · Chicken Who?</li>
+      <li>Mai · Parmjelly</li>
+    </ul>
+
+    <div class="actions rv">
+      <a class="btn btn-gold" href="https://www.instagram.com/oldmansandwich/" target="_blank" rel="noopener">Ver o do mês no Instagram</a>
+    </div>
+    <p class="tiny rv" style="margin-top:18px">O especial do mês é anunciado primeiro no Instagram</p>
+  </div>
+</section>
+
+<!-- ============ CARDÁPIO (vitrine) ============ -->
+<section class="sec coal" id="cardapio" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Cardápio</p>
+      <h2 class="h2" id="menu-h">Os mestres<br>da casa</h2>
+      <p class="lede">
+        Carne de 160 g na chapa, pão brioche tostado e molho feito aqui dentro.
+        O que muda de um pro outro é o recheio. Esses são cinco; tem mais.
+      </p>
+    </div>
+
+    <ul class="rule-list rv">
+      <li>
+        <h3>Basic Burger</h3>
+        <p>Pão, hambúrguer 160 g e queijo prato. Sem lugar pra esconder defeito.</p>
+        <span class="tag">R$ 35</span>
+      </li>
+      <li>
+        <h3>Blacksmith</h3>
+        <p>Molho cheddar cremoso, cebola caramelizada, bacon e picles da casa. Acompanha maionese de alho.</p>
+        <span class="tag">R$ 43</span>
+      </li>
+      <li>
+        <h3>Hard Work Burger</h3>
+        <p>American cheese de gorgonzola, geleia de bacon, cebola crispy e maionese de alho negro no pão brioche.</p>
+        <span class="tag">R$ 45</span>
+      </li>
+      <li>
+        <h3>Mr. Chicken</h3>
+        <p>Sobrecoxa empanada e frita, cheddar cremoso, bacon, tomate, alface e old sauce. Nasceu junto com o Old.</p>
+        <span class="tag">R$ 40</span>
+      </li>
+      <li>
+        <h3>The Old Man</h3>
+        <p>Queijo cheddar, bacon, brie empanado, jalapeño e rúcula. O que leva o nome da casa.</p>
+        <span class="tag">R$ 60</span>
+      </li>
+    </ul>
+
+    <div class="actions rv">
+      <a class="btn btn-gold" href="cardapio.html">Ver o cardápio completo</a>
+      <a class="btn btn-line" href="https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592" target="_blank" rel="noopener">Pedir no iFood</a>
+    </div>
+    <p class="tiny rv" style="margin-top:16px">35 itens no cardápio completo, entre burgers, chickens, entradas, veg, doces e cervejas</p>
+
+    <div class="tira rv" style="margin-top:clamp(36px,4.6vw,60px)">
+      <figure>
+        <img src="assets/img/coxinha.jpg" width="1100" height="1375" loading="lazy" alt="Coxinha Suprema com parmesão ralado e maionese de glaze de laranja, na embalagem da casa.">
+        <figcaption>Coxinha Suprema</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/chicken-sand.jpg" width="1100" height="1375" loading="lazy" alt="Sanduíche de frango cortado ao meio, com pesto verde e molho vermelho.">
+        <figcaption>Frango da casa</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/burger-califa.jpg" width="360" height="640" loading="lazy" alt="O burger Califa montado em prato de porcelana sobre a mesa de madeira.">
+        <figcaption>Califa</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/burger-duo.jpg" width="360" height="640" loading="lazy" alt="Dois burgers com queijo derretido, segurados na mão.">
+        <figcaption>Na mão</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/chicken-who.jpg" width="360" height="640" loading="lazy" alt="O especial Chicken Who?, com sobrecoxa empanada e Caesar slaw.">
+        <figcaption>Chicken Who?</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/burger-legacy.jpg" width="361" height="640" loading="lazy" alt="O burger Legacy visto de cima, no prato estampado da casa.">
+        <figcaption>Legacy</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTÓRIA ============ -->
+<section class="sec" id="historia" aria-labelledby="hist-h">
+  <div class="wrap place">
+    <div class="rv">
+      <p class="eyebrow">A história</p>
+      <h2 class="h2" id="hist-h">O nome é pra quem<br>devia ser eterno</h2>
+      <p class="body">
+        Old Man é homenagem pros avós. A casa começou em 2017 na garagem da Dona
+        Margarida, em São Caetano, com o que tinha ali. O apelido ficou na placa:
+        <b>Garage Sandwich</b>. A pegada do cardápio vem do mesmo lugar: trabalho de
+        artesão, do jeito que os antigos faziam.
+      </p>
+      <p class="body">
+        De lá pra cá a garagem virou salão, a fila dobrou a esquina e o Barcelona entrou
+        na conversa dos melhores hambúrgueres de São Paulo. O que não mudou foi quem abre
+        a cozinha às 18h e fecha às 23h30.
+      </p>
+
+      <blockquote class="quote rv" style="margin-top:36px">
+        <p>“Uma coisa que eu aprendi dentro da minha família é que a maior demonstração de amor é servir as pessoas.”</p>
+        <footer>Wendell Trevisan, fundador</footer>
+      </blockquote>
+
+    </div>
+
+    <div class="place-img rv">
+      <img src="assets/img/vo-natal.jpg" width="1200" height="1200" loading="lazy"
+           alt="Dona Margarida sentada ao lado do neto Wendell na frente da casa, segurando uma caixa do Old Man.">
+    </div>
+  </div>
+</section>
+
+<!-- ============ A VÓ ============ -->
+<section class="sec clay" id="vo" aria-labelledby="vo-h">
+  <div class="wrap vo">
+    <div class="vo-frame rv">
+      <img src="assets/img/avos.jpg" width="1200" height="1500" loading="lazy"
+           alt="Retrato em preto e branco dos avós do fundador, de pé no quintal.">
+      <p class="legenda">O motivo de estarmos aqui.</p>
+    </div>
+
+    <div class="rv">
+      <p class="eyebrow">A garagem era dela</p>
+      <h2 class="h2" id="vo-h">Toda casa boa<br><span class="mark">começa na cozinha</span><br>de alguém</h2>
+      <p class="body">
+        Antes de virar hamburgueria, o endereço era a casa da Dona Margarida.
+        A garagem virou cozinha, a cozinha virou fila e a fila virou isso aqui.
+        O nome da casa é por ela.
+      </p>
+      <p class="body">
+        É por isso que Old Man não é só um nome em inglês na placa. É quem ensinou
+        a receita, emprestou o fogão e ficou olhando dar certo.
+      </p>
+      <p class="vo-frase rv">“A vó deve estar muito orgulhosa de ver tudo isso acontecer aqui na casa dela.”</p>
+
+      <ul class="stickers">
+        <li class="sticker">Est. 2017</li>
+        <li class="sticker gold">Garage Sandwich</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRÊMIOS ============ -->
+<section class="sec clay" id="premios" aria-labelledby="prem-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Conquistas</p>
+      <h2 class="h2" id="prem-h">As conquistas<br>da casa</h2>
+      <p class="lede">
+        O principal ranking do Guia do Hambúrguer olha São Paulo e Grande São Paulo
+        inteiras. O Old Man tá lá desde 2023, vindo de São Caetano.
+      </p>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><b>2º</b><span>Melhor hamburgueria de São Paulo e Grande SP no ranking 2026 do Guia do Hambúrguer</span></div>
+      <div class="stat"><b>4 anos</b><span>Seguidos no pódio, dois deles em primeiro lugar</span></div>
+      <div class="stat"><b>4,6 ★</b><span>Média das avaliações públicas, somando mais de 7 mil notas</span></div>
+      <div class="stat"><b>90,6 mil</b><span>Seguidores acompanhando a casa no Instagram</span></div>
+    </div>
+
+    <ul class="linha rv">
+      <li>
+        <span class="ano">2026</span>
+        <p><b>2ª melhor hamburgueria de São Paulo e Grande São Paulo</b> no principal ranking do Guia do Hambúrguer.</p>
+      </li>
+      <li>
+        <span class="ano">2023 a 2026</span>
+        <p><b>Quatro anos seguidos no pódio</b> do mesmo ranking, dois deles em primeiro lugar.</p>
+      </li>
+      <li>
+        <span class="ano">2024</span>
+        <p><b>Indicada ao Prêmio Hambúrguer Perfeito</b>, de melhor burger do Brasil, pelo @hamburguerperfeito.</p>
+      </li>
+      <li>
+        <span class="ano">Hoje</span>
+        <p><b>4,9 no iFood</b> e 90,6 mil pessoas acompanhando a casa no Instagram.</p>
+      </li>
+    </ul>
+
+    <div class="premio-par rv">
+      <figure>
+        <img src="assets/img/premio-hp.jpg" width="1200" height="1500" loading="lazy"
+             alt="Wendell Trevisan na frente da casa segurando o convite do Prêmio Hambúrguer Perfeito.">
+      </figure>
+      <figure>
+        <img src="assets/img/premio-convite.jpg" width="1100" height="1375" loading="lazy"
+             alt="Convite do Prêmio Hambúrguer Perfeito aberto, com os dizeres Você foi indicado.">
+      </figure>
+    </div>
+
+    <figure class="foto-larga rv">
+      <img src="assets/img/equipe-premio.jpg" width="1800" height="1326" loading="lazy"
+           alt="A equipe inteira do Old Man reunida na calçada da Rua Tapajós, com a placa de 2ª melhor hamburgueria no meio.">
+    </figure>
+
+    <div class="place rv" style="margin-top:clamp(28px,3.4vw,44px);align-items:start">
+      <div>
+        <h3 class="h3">O prêmio é de quem abre a porta todo dia</h3>
+        <p class="body">
+          “Esse prêmio é de cada um que sai de sua casa todos os dias pra fazer o Old Man
+          acontecer, é de cada cliente que pede, vem, volta e indica.” Foi assim que a casa
+          comemorou o resultado de 2026, com a equipe inteira na calçada da Rua Tapajós.
+        </p>
+      </div>
+      <div>
+        <p class="body" style="margin-top:0">
+          Representar São Caetano e o ABC no meio dos grandes nomes de São Paulo é a parte
+          que mais dá orgulho.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tear-wrap" style="background:var(--clay)" aria-hidden="true"><svg class="tear" style="color:var(--ink)" viewBox="0 0 1440 24" preserveAspectRatio="none"><path d="M0 24 L0 5.9 L61 2.4 L125 11.6 L169 2.5 L217 6.2 L244 13.2 L276 11.7 L343 4.2 L391 2.5 L448 5.5 L512 8.0 L584 3.9 L620 4.1 L672 9.6 L741 8.3 L779 8.0 L832 5.1 L890 10.5 L942 13.0 L998 7.7 L1072 5.2 L1117 8.5 L1184 7.2 L1249 11.7 L1281 10.3 L1330 11.8 L1372 3.3 L1419 11.1 L1440 6.3 L1440 24 Z"/></svg></div>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="sec" id="instagram" aria-labelledby="ig-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">@oldmansandwich</p>
+      <h2 class="h2" id="ig-h">90,6 mil pessoas<br>já acompanham</h2>
+      <p class="lede">
+        O burger do mês, os rolês e os bastidores saem primeiro por lá.
+        Toca em qualquer foto pra abrir o post.
+      </p>
+    </div>
+
+    <div class="ig-grid rv">
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/reel/DdXCtE-In29/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/01-DdXCtE-In29.jpg" width="640" height="640" loading="lazy" alt="Post: o especial de setembro, Legacy.">
+        <span class="cap">Set · Legacy</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/reel/Db9DeD0IfHW/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/02-Db9DeD0IfHW.jpg" width="640" height="640" loading="lazy" alt="Post: o Califa vira o burger de agosto.">
+        <span class="cap">Ago · Califa</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/reel/DbwQqOzoFBB/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/03-DbwQqOzoFBB.jpg" width="640" height="640" loading="lazy" alt="Post: IPA Day da Lagunitas no salão.">
+        <span class="cap">IPA Day Lagunitas</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/p/Da8KFowRCFl/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/04-Da8KFowRCFl.jpg" width="640" height="640" loading="lazy" alt="Post: a equipe com a placa de 2ª melhor hamburgueria.">
+        <span class="cap">2º no Guia do Hambúrguer</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/reel/Da062jdIQcv/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/05-Da062jdIQcv.jpg" width="640" height="640" loading="lazy" alt="Post: o especial de julho, Chicken Who?.">
+        <span class="cap">Jul · Chicken Who?</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/p/DZszpVfmMIP/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/06-DZszpVfmMIP.jpg" width="640" height="640" loading="lazy" alt="Post: a vitrine com o letreiro dourado da casa.">
+        <span class="cap">A vitrine</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/reel/DZK16biRjwX/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/07-DZK16biRjwX.jpg" width="361" height="640" loading="lazy" alt="Post: montagem de um sanduíche na cozinha.">
+        <span class="cap">Na cozinha</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/p/DY4yC8eEXxq/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/08-DY4yC8eEXxq.jpg" width="640" height="640" loading="lazy" alt="Post: Gasolina, especial do Dia do Hambúrguer.">
+        <span class="cap">Gasolina, Dia do Hambúrguer</span>
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/oldmansandwich/p/DYQISBdmCoR/" target="_blank" rel="noopener">
+        <img src="assets/img/ig/09-DYQISBdmCoR.jpg" width="640" height="640" loading="lazy" alt="Post: sanduíche saindo da cozinha.">
+        <span class="cap">Bastidor</span>
+      </a>
+    </div>
+
+    <div class="actions rv">
+      <a class="btn btn-line" href="https://www.instagram.com/oldmansandwich/" target="_blank" rel="noopener">Seguir @oldmansandwich</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ONDE FICA ============ -->
+<section class="sec coal" id="onde" aria-labelledby="onde-h">
+  <div class="wrap">
+    <div class="place">
+      <div class="rv">
+        <div class="sec-head" style="margin-bottom:clamp(26px,3vw,40px)">
+          <p class="eyebrow">Onde fica</p>
+          <h2 class="h2" id="onde-h">Rua Tapajós, 846<br>Barcelona, São Caetano</h2>
+        </div>
+        <ul class="info-list">
+          <li>
+            <span class="k">Agora</span>
+            <span class="v" id="placeLive">Verificando o horário…</span>
+          </li>
+          <li>
+            <span class="k">Funcionamento</span>
+            <span class="v">Todos os dias, das 18h às 23h30</span>
+          </li>
+          <li>
+            <span class="k">Endereço</span>
+            <a class="v" href="https://www.google.com/maps/search/?api=1&amp;query=Old+Man+Sandwich+Shop+Rua+Tapaj%C3%B3s+846+S%C3%A3o+Caetano+do+Sul" target="_blank" rel="noopener">Rua Tapajós, 846 · Barcelona<br>São Caetano do Sul · SP · 09551-230</a>
+          </li>
+          <li>
+            <span class="k">Reserva</span>
+            <span class="v">Não trabalhamos com reserva. Grupos de até 6 pessoas, por ordem de chegada.</span>
+          </li>
+          <li>
+            <span class="k">WhatsApp</span>
+            <a class="v" href="https://wa.me/5511917545253" target="_blank" rel="noopener">(11) 91754-5253</a>
+          </li>
+          <li>
+            <span class="k">Telefone</span>
+            <a class="v" href="tel:+551142263712">(11) 4226-3712</a>
+          </li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=Old+Man+Sandwich+Shop+Rua+Tapaj%C3%B3s+846+S%C3%A3o+Caetano+do+Sul" target="_blank" rel="noopener">Abrir no mapa</a>
+          <a class="btn btn-line" href="https://wa.me/5511917545253" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="place-img rv">
+        <img src="assets/img/fachada.jpg" width="360" height="640" loading="lazy"
+             alt="Placa esmaltada do Old Man Garage Sandwich, est. 2017, na parede de tijolo da fachada.">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Dúvidas</p>
+      <h2 class="h2" id="faq-h">Perguntas<br>frequentes</h2>
+    </div>
+
+    <div class="faq rv">
+      <details>
+        <summary>Dá pra reservar mesa?</summary>
+        <p class="ans">Não. Atendimento por ordem de chegada, em grupo de até 6 pessoas. Sexta e sábado a fila começa antes de abrir, então chegar perto das 18h é a melhor forma de esperar menos.</p>
+      </details>
+      <details>
+        <summary>Vocês fazem delivery?</summary>
+        <p class="ans">Sim, pelo iFood. É o único canal de entrega e também onde o cardápio e o preço ficam certos, burger do mês incluso. Se você procurou em outro app e não achou, é porque a casa não tá lá.</p>
+      </details>
+      <details>
+        <summary>Qual é o horário?</summary>
+        <p class="ans">Das 18h às 23h30, todos os dias. Em eventos especiais a casa às vezes abre mais cedo, e isso é sempre avisado no Instagram.</p>
+      </details>
+      <details>
+        <summary>O burger do mês fica no cardápio fixo?</summary>
+        <p class="ans">Em geral não: é receita de tempo limitado, feita pra sair de cartaz. Mas já rolou de a procura segurar o lanche por mais tempo. O Califa nasceu como especial do IPA Day e acabou ficando agosto inteiro.</p>
+      </details>
+      <details>
+        <summary>Quantas pessoas cabem por mesa?</summary>
+        <p class="ans">Até 6 pessoas. Acima disso a casa não consegue sentar todo mundo junto. E não vale mandar uma pessoa na frente pra segurar mesa: a fila corre por ordem de chegada do grupo completo.</p>
+      </details>
+      <details>
+        <summary>Onde fica e como chego?</summary>
+        <p class="ans">Rua Tapajós, 846, bairro Barcelona, São Caetano do Sul, SP, CEP 09551-230. O ponto é na divisa com a zona sudeste de São Paulo, a poucos minutos do centro de São Caetano.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top" aria-label="Old Man Sandwich Shop">
+          <img class="brand" src="assets/img/logo-oldman.png" width="389" height="158" alt="Old Man Sandwich Shop">
+        </a>
+        <p class="body" style="margin-top:20px;max-width:34ch">
+          Hamburgueria artesanal em São Caetano do Sul desde 2017.
+          Da garagem da vó ao pódio de São Paulo.
+        </p>
+      </div>
+
+      <div>
+        <h4>A casa</h4>
+        <ul>
+          <li><a href="#casa">Como funciona</a></li>
+          <li><a href="#mes">Burger do mês</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#vo">A vó</a></li>
+          <li><a href="#premios">Conquistas</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Old+Man+Sandwich+Shop+Rua+Tapaj%C3%B3s+846+S%C3%A3o+Caetano+do+Sul" target="_blank" rel="noopener">Rua Tapajós, 846 · Barcelona<br>São Caetano do Sul · SP</a></li>
+          <li><a href="https://wa.me/5511917545253" target="_blank" rel="noopener">WhatsApp (11) 91754-5253</a></li>
+          <li><a href="tel:+551142263712">(11) 4226-3712</a></li>
+          <li><a href="https://www.instagram.com/oldmansandwich/" target="_blank" rel="noopener">@oldmansandwich</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bar">
+      <span>© <span id="yr">2026</span> Old Man Sandwich Shop · Est. 2017</span>
+      <span>Todos os dias · 18h às 23h30 · Sem reserva</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ DOCK MOBILE ============ -->
+<nav class="dock" id="dock" aria-label="Ações rápidas">
+  <a class="main" href="https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.6 11.2a2 2 0 0 1-2 1.8H6.6a2 2 0 0 1-2-1.8L3 7Z"/><path d="M8.5 7V5.5a3.5 3.5 0 0 1 7 0V7"/></svg>
+    Pedir no iFood
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Old+Man+Sandwich+Shop+Rua+Tapaj%C3%B3s+846+S%C3%A3o+Caetano+do+Sul" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+    Como chegar
+  </a>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Old Man Sandwich Shop",
+  "alternateName":"Old Man Garage Sandwich",
+  "description":"Hamburgueria artesanal em São Caetano do Sul desde 2017. Quatro anos seguidos no pódio do ranking do Guia do Hambúrguer. Salão por ordem de chegada e delivery pelo iFood.",
+  "servesCuisine":["Hambúrguer","Sanduíches","Americana"],
+  "priceRange":"$$",
+  "image":"assets/img/hero-skate.jpg",
+  "foundingDate":"2017",
+  "telephone":"+551142263712",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Rua Tapajós, 846",
+    "addressLocality":"São Caetano do Sul",
+    "addressRegion":"SP",
+    "postalCode":"09551-230",
+    "addressCountry":"BR"
+  },
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"18:00","closes":"23:30"
+  }],
+  "acceptsReservations":"False",
+  "sameAs":["https://www.instagram.com/oldmansandwich/","https://www.facebook.com/oldmansandwich/"],
+  "hasMenu":"https://www.ifood.com.br/delivery/sao-caetano-do-sul-sp/old-man-sandwich-shop-barcelona/7061b3fb-a69e-45ff-aa52-ec0508d66592"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"O Old Man Sandwich Shop aceita reserva?","acceptedAnswer":{"@type":"Answer","text":"Não. O atendimento é por ordem de chegada e a casa recebe grupos de até 6 pessoas. Em sexta e sábado a fila começa cedo; chegar perto da abertura, às 18h, reduz a espera."}},
+    {"@type":"Question","name":"O Old Man Sandwich Shop faz delivery?","acceptedAnswer":{"@type":"Answer","text":"Sim, pelo iFood. É o único canal de entrega e também onde o cardápio e os preços ficam atualizados, inclusive o burger do mês."}},
+    {"@type":"Question","name":"Qual o horário do Old Man Sandwich Shop?","acceptedAnswer":{"@type":"Answer","text":"Todos os dias, das 18h às 23h30. Em eventos especiais a casa pode abrir mais cedo, sempre avisado no Instagram."}},
+    {"@type":"Question","name":"O burger do mês continua no cardápio depois?","acceptedAnswer":{"@type":"Answer","text":"Em geral não: é uma receita de tempo limitado. Mas já aconteceu de a procura segurar o lanche por mais tempo, como o Califa, que nasceu para o IPA Day e ficou o mês de agosto inteiro."}},
+    {"@type":"Question","name":"Onde fica o Old Man Sandwich Shop?","acceptedAnswer":{"@type":"Answer","text":"Rua Tapajós, 846, bairro Barcelona, São Caetano do Sul, SP, CEP 09551-230."}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  'use strict';
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  $('#yr').textContent=new Date().getFullYear();
+
+  /* ---------- menu mobile ---------- */
+  var navBtn=$('#navBtn'),drawer=$('#drawer');
+  function setNav(open){
+    navBtn.setAttribute('aria-expanded',String(open));
+    drawer.classList.toggle('open',open);
+    document.body.classList.toggle('lock',open);
+  }
+  navBtn.addEventListener('click',function(){setNav(navBtn.getAttribute('aria-expanded')!=='true')});
+  $$('#drawer a').forEach(function(a){a.addEventListener('click',function(){setNav(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setNav(false)});
+
+  /* ---------- reveal ----------
+     O observer sozinho não basta: quem abre o site direto num link com âncora
+     (/#faq) pula tudo que ficou para trás, e esses blocos ficariam invisíveis
+     para sempre. Por isso toda vez que a página se mexe por outro motivo
+     (carregamento de imagem, troca de âncora, resize) roda uma varredura que
+     libera tudo que já passou pela dobra. */
+  var rvEls=$$('.rv'),io=null;
+
+  function reveal(el){
+    if(el.classList.contains('in'))return;
+    el.classList.add('in');
+    if(io)io.unobserve(el);
+  }
+  function catchUp(){
+    var h=window.innerHeight||0;
+    rvEls.forEach(function(el){
+      if(el.classList.contains('in'))return;
+      var r=el.getBoundingClientRect();
+      if(r.top<h)reveal(el);
+    });
+  }
+
+  if('IntersectionObserver' in window){
+    io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting)reveal(e.target)})
+    },{rootMargin:'0px 0px -8% 0px',threshold:.05});
+    rvEls.forEach(function(el){io.observe(el)});
+    catchUp();
+    window.addEventListener('load',catchUp);
+    window.addEventListener('hashchange',catchUp);
+    window.addEventListener('resize',catchUp,{passive:true});
+    window.addEventListener('scroll',catchUp,{passive:true});
+  }else{
+    rvEls.forEach(function(el){el.classList.add('in')})
+  }
+
+  /* ---------- vídeos ----------
+     O Chrome não dispara autoplay em vídeo que nasce fora da tela, então quem
+     manda tocar é a rolagem. Decidir por área visível em vez de evento de
+     cruzamento evita o caso da rolagem rápida, que passa direto pelo limite
+     e deixa o vídeo parado. */
+  var semMovimento=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var videos=$$('video[autoplay]');
+
+  if(semMovimento){
+    videos.forEach(function(v){try{v.removeAttribute('autoplay');v.pause()}catch(e){}});
+  }else if(videos.length){
+    var pendente=false;
+    function ajustaVideos(){
+      pendente=false;
+      var h=window.innerHeight||0;
+      videos.forEach(function(v){
+        var r=v.getBoundingClientRect();
+        var visivel=Math.min(r.bottom,h)-Math.max(r.top,0);
+        var naTela=!document.hidden && r.height>0 && visivel>Math.min(r.height*.25,200);
+        if(naTela){
+          if(v.paused){var pr=v.play(); if(pr&&pr.catch)pr.catch(function(){})}
+        }else if(!v.paused){
+          try{v.pause()}catch(e){}
+        }
+      });
+    }
+    function agenda(){
+      if(pendente)return;
+      pendente=true;
+      /* rAF precisa ser chamado no window: solto, o Chrome recusa com
+         "Illegal invocation" e o ajuste para de rodar. */
+      if(window.requestAnimationFrame)window.requestAnimationFrame(ajustaVideos);
+      else setTimeout(ajustaVideos,120);
+    }
+    ajustaVideos();
+    window.addEventListener('scroll',agenda,{passive:true});
+    window.addEventListener('resize',agenda,{passive:true});
+    window.addEventListener('load',agenda);
+    document.addEventListener('visibilitychange',agenda);
+    videos.forEach(function(v){v.addEventListener('loadeddata',agenda)});
+  }
+
+  /* ---------- dock ---------- */
+  var dock=$('#dock');
+  function onScroll(){dock.classList.toggle('show',window.scrollY>460)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  /* ---------- aberto agora ----------
+     Horário fixo da casa: todos os dias, 18h00 às 23h30.
+     Sempre calculado no fuso de São Paulo, não no relógio do visitante. */
+  var OPEN=18*60, CLOSE=23*60+30;
+
+  function nowInSP(){
+    try{
+      var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',hour12:false,hour:'2-digit',minute:'2-digit'}).formatToParts(new Date());
+      var g=function(t){return (p.filter(function(x){return x.type===t})[0]||{}).value};
+      var h=parseInt(g('hour'),10); if(h===24)h=0;
+      return h*60+parseInt(g('minute'),10);
+    }catch(e){
+      var n=new Date();return n.getHours()*60+n.getMinutes();
+    }
+  }
+
+  var heroTxt=$('#heroTxt'),heroDot=$('#heroDot'),heroLive=$('#heroLive'),placeLive=$('#placeLive');
+
+  function updateStatus(){
+    var m=nowInSP(),open=(m>=OPEN&&m<CLOSE),txt,place;
+    if(open){
+      var left=CLOSE-m;
+      txt='Aberto agora';
+      place=left<=60?('Aberto, fecha em '+left+' min'):'Aberto agora, até 23h30';
+    }else{
+      txt=m<OPEN?'Fechado, abre 18h':'Fechado, abre amanhã 18h';
+      place=txt;
+    }
+    if(heroTxt.textContent!==txt)heroTxt.textContent=txt;
+    heroDot.className=open?'dot':'dot off';
+    heroLive.className=open?'live on':'live';
+    if(placeLive.textContent!==place)placeLive.textContent=place;
+  }
+
+  updateStatus();
+  setInterval(updateStatus,60000);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)updateStatus()});
+})();
+</script>
+</body>
+</html>

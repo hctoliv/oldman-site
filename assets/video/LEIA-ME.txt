@@ -1,0 +1,10 @@
+Coloque aqui o vídeo de fundo do hero com o nome exato:
+
+    hero.mp4
+
+Recomendado: 1920x1080 ou 1280x720, H.264, sem áudio, 8 a 15 segundos em
+loop, abaixo de 6 MB. Opcionalmente também hero.webm, que o site usa antes
+do mp4 quando existir.
+
+Enquanto o arquivo não estiver aqui, o hero mostra a foto da vitrine
+(assets/img/hero-vitrine.jpg) como poster. Nada quebra.
